@@ -1,0 +1,12 @@
+﻿<div class="row">
+    <div class="span4" data-bind="with : leftMenu">
+        <ul class="nav nav-tabs nav-stacked" data-bind="foreach : items">
+            <li data-bind="css : { active : $parent.selected() == $data }"><a href="#" data-bind="text : $data, click : $parent.selectItem">
+            </a></li>
+        </ul>
+    </div>
+    <div class="span8" data-bind="with : content">
+        <!-- ko template:{html:html,data:data} -->
+        <!-- /ko -->
+    </div>
+</div>

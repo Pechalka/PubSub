@@ -1,0 +1,8 @@
+﻿<div class="navbar">
+    <div class="navbar-inner" data-bind="with : topMenu">
+        <a class="brand" href="#">Title</a>
+        <ul class="nav" data-bind="foreach : items">
+            <li class="active" data-bind="css : { active : $parent.selected() == $data}"><a href="#" data-bind="text : $data, click : $parent.selectItem"></a></li>
+        </ul>
+    </div>
+</div>
